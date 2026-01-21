@@ -6,16 +6,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+:root {
+    --bg: #f4f6f8;
+    --text: #222;
+    --card: #ffffff;
+    --primary: #0d6efd;
+}
+
+body.dark {
+    --bg: #0f172a;
+    --text: #e5e7eb;
+    --card: #1e293b;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f4f6f8;
-    color: #222;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
 }
 
-/* HEADER */
 header {
-    background: linear-gradient(135deg, #111, #2b2b2b);
+    background: linear-gradient(135deg, #0d6efd, #1e40af);
     color: white;
     padding: 70px 20px;
     text-align: center;
@@ -23,26 +36,31 @@ header {
 
 header h1 {
     font-size: 36px;
-    margin-bottom: 10px;
 }
 
-header p {
-    font-size: 18px;
-    opacity: 0.9;
+.toggle {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: white;
+    color: #000;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .btn {
     display: inline-block;
     margin-top: 25px;
     padding: 12px 30px;
-    background: #0d6efd;
-    color: white;
+    background: white;
+    color: #0d6efd;
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
 }
 
-/* SECTIONS */
 section {
     max-width: 1000px;
     margin: auto;
@@ -50,56 +68,43 @@ section {
 }
 
 h2 {
-    color: #0d6efd;
-    margin-bottom: 20px;
+    color: var(--primary);
 }
 
 .card {
-    background: white;
+    background: var(--card);
     padding: 25px;
     border-radius: 12px;
     margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-ul li {
-    margin-bottom: 10px;
-}
-
-/* FOOTER */
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 25px;
-}
-
-/* STICKY CONTACT BUTTON */
 .sticky-contact {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    background: #0d6efd;
+    background: var(--primary);
     color: white;
-    padding: 15px 22px;
+    padding: 14px 22px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    z-index: 999;
 }
 
-.sticky-contact:hover {
-    background: #084298;
+footer {
+    text-align: center;
+    padding: 25px;
 }
 </style>
 </head>
 
 <body>
 
+<div class="toggle" onclick="toggleMode()">🌙 Dark</div>
+
 <header>
     <h1>Abhishek Girishbabu</h1>
-    <p>Digital Marketing • Website Management • SEO • Analytics</p>
+    <p>Digital Marketing • Website Performance • SEO • Analytics</p>
 
     <a class="btn" href="Abhishek_Girishbabu_CV.pdf" target="_blank">
         Download CV
@@ -107,73 +112,78 @@ footer {
 </header>
 
 <section>
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            MSc Digital Marketing & Analytics graduate with hands-on experience in
-            website management, SEO optimisation, GA4 reporting, landing page optimisation,
-            and performance-driven digital strategies.
-        </p>
-    </div>
+<h2>Professional Summary</h2>
+<div class="card">
+<p>
+Results-driven Digital Marketing professional with hands-on experience in website management,
+SEO optimisation, analytics tracking, and performance reporting across service-based and digital platforms.
+Strong understanding of CMS-based content management, UX optimisation, and conversion-focused strategies.
+Currently completing MSc in Digital Marketing & Analytics with strong interest in data-driven growth
+and website performance optimisation.
+</p>
+</div>
 </section>
 
 <section>
-    <h2>Core Skills</h2>
-    <div class="card">
-        <ul>
-            <li>Website Management & CMS</li>
-            <li>SEO (On-page & Technical Basics)</li>
-            <li>Google Analytics 4</li>
-            <li>Landing Page Optimisation</li>
-            <li>Conversion Rate Optimisation (CRO)</li>
-            <li>Digital Performance Reporting</li>
-        </ul>
-    </div>
+<h2>Core Expertise</h2>
+<div class="card">
+<ul>
+<li>Website Management & CMS Optimisation (WordPress)</li>
+<li>Search Engine Optimisation (SEO, AEO, Organic Growth)</li>
+<li>Google Analytics 4 & Performance Reporting</li>
+<li>Landing Page & UX Optimisation</li>
+<li>Conversion Rate Optimisation (CRO fundamentals)</li>
+<li>Keyword Research & Search Console Monitoring</li>
+<li>Digital Campaign Support (Google Ads & Meta – support level)</li>
+<li>CRM & Email Marketing Support (HubSpot / Zoho)</li>
+</ul>
+</div>
 </section>
 
 <section>
-    <h2>Experience</h2>
+<h2>Professional Experience</h2>
 
-    <div class="card">
-        <strong>Digital Marketing Intern — Napblog (2025)</strong>
-        <p>Website updates, SEO optimisation, GA4 analysis, UX improvements.</p>
-    </div>
+<div class="card">
+<strong>Digital Marketing Intern — Napblog (Dublin)</strong>
+<p>
+Managed website content updates using CMS platforms while ensuring SEO best practices and strong user experience.
+Implemented on-page SEO improvements including metadata, internal linking, and content optimisation.
+Monitored website performance using GA4 and SEO tools, preparing insights for optimisation.
+Supported landing page improvements to increase engagement and conversion.
+</p>
+</div>
 
-    <div class="card">
-        <strong>Business Marketing Assistant — Tech Destiny</strong>
-        <p>Lead generation support, website optimisation, CRM & email marketing.</p>
-    </div>
+<div class="card">
+<strong>Business Marketing Assistant — Tech Destiny</strong>
+<p>
+Supported digital marketing initiatives focused on lead generation and website engagement.
+Assisted in keyword research, website optimisation, CRM updates, and email marketing activities.
+Collaborated with internal teams to deliver digital campaigns efficiently.
+</p>
+</div>
+
 </section>
 
 <section id="contact">
-    <h2>Contact Me</h2>
-
-    <div class="card">
-        <p><strong>Email:</strong>
-            <a href="mailto:abhi25girish@gmail.com">
-                abhi25girish@gmail.com
-            </a>
-        </p>
-
-        <p><strong>Phone:</strong>
-            <a href="tel:+353871234567">
-                +353 87 123 4567
-            </a>
-        </p>
-
-        <p><strong>Location:</strong> Dublin, Ireland</p>
-    </div>
+<h2>Contact</h2>
+<div class="card">
+<p><strong>Email:</strong> <a href="mailto:abhi25girish@gmail.com">abhi25girish@gmail.com</a></p>
+<p><strong>Phone:</strong> <a href="tel:+353871234567">+353 87 123 4567</a></p>
+<p><strong>Location:</strong> Dublin, Ireland</p>
+</div>
 </section>
 
 <footer>
-    <p>© 2026 Abhishek Girishbabu</p>
+<p>© 2026 Abhishek Girishbabu</p>
 </footer>
 
-<!-- STICKY BUTTON -->
-<a class="sticky-contact" href="#contact">
-    Contact Me
-</a>
+<a class="sticky-contact" href="#contact">Contact Me</a>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
-
