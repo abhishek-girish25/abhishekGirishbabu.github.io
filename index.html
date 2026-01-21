@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,9 +9,9 @@
 <style>
 :root {
     --bg: #f4f6f8;
-    --text: #222;
+    --text: #1f2937;
     --card: #ffffff;
-    --primary: #0d6efd;
+    --primary: #2563eb;
 }
 
 body.dark {
@@ -27,163 +28,96 @@ body {
     transition: 0.3s;
 }
 
-header {
-    background: linear-gradient(135deg, #0d6efd, #1e40af);
-    color: white;
-    padding: 70px 20px;
-    text-align: center;
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header h1 {
-    font-size: 36px;
-}
-
-.toggle {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    background: white;
-    color: #000;
-    padding: 8px 14px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: white;
-    color: #0d6efd;
+nav a {
+    margin-left: 20px;
     text-decoration: none;
-    border-radius: 30px;
+    color: var(--text);
     font-weight: 600;
 }
 
+/* DARK MODE */
+.toggle {
+    cursor: pointer;
+    background: var(--primary);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 38px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.85;
+}
+
+/* SECTIONS */
 section {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 h2 {
     color: var(--primary);
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .card {
     background: var(--card);
     padding: 25px;
-    border-radius: 12px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
-.sticky-contact {
+/* CONTACT */
+.contact a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* STICKY BUTTON */
+.sticky {
     position: fixed;
     bottom: 25px;
     right: 25px;
     background: var(--primary);
     color: white;
-    padding: 14px 22px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer {
-    text-align: center;
-    padding: 25px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="toggle" onclick="toggleMode()">🌙 Dark</div>
-
-<header>
-    <h1>Abhishek Girishbabu</h1>
-    <p>Digital Marketing • Website Performance • SEO • Analytics</p>
-
-    <a class="btn" href="Abhishek_Girishbabu_CV.pdf" target="_blank">
-        Download CV
-    </a>
-</header>
-
-<section>
-<h2>Professional Summary</h2>
-<div class="card">
-<p>
-Results-driven Digital Marketing professional with hands-on experience in website management,
-SEO optimisation, analytics tracking, and performance reporting across service-based and digital platforms.
-Strong understanding of CMS-based content management, UX optimisation, and conversion-focused strategies.
-Currently completing MSc in Digital Marketing & Analytics with strong interest in data-driven growth
-and website performance optimisation.
-</p>
-</div>
-</section>
-
-<section>
-<h2>Core Expertise</h2>
-<div class="card">
-<ul>
-<li>Website Management & CMS Optimisation (WordPress)</li>
-<li>Search Engine Optimisation (SEO, AEO, Organic Growth)</li>
-<li>Google Analytics 4 & Performance Reporting</li>
-<li>Landing Page & UX Optimisation</li>
-<li>Conversion Rate Optimisation (CRO fundamentals)</li>
-<li>Keyword Research & Search Console Monitoring</li>
-<li>Digital Campaign Support (Google Ads & Meta – support level)</li>
-<li>CRM & Email Marketing Support (HubSpot / Zoho)</li>
-</ul>
-</div>
-</section>
-
-<section>
-<h2>Professional Experience</h2>
-
-<div class="card">
-<strong>Digital Marketing Intern — Napblog (Dublin)</strong>
-<p>
-Managed website content updates using CMS platforms while ensuring SEO best practices and strong user experience.
-Implemented on-page SEO improvements including metadata, internal linking, and content optimisation.
-Monitored website performance using GA4 and SEO tools, preparing insights for optimisation.
-Supported landing page improvements to increase engagement and conversion.
-</p>
-</div>
-
-<div class="card">
-<strong>Business Marketing Assistant — Tech Destiny</strong>
-<p>
-Supported digital marketing initiatives focused on lead generation and website engagement.
-Assisted in keyword research, website optimisation, CRM updates, and email marketing activities.
-Collaborated with internal teams to deliver digital campaigns efficiently.
-</p>
-</div>
-
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p><strong>Email:</strong> <a href="mailto:abhi25girish@gmail.com">abhi25girish@gmail.com</a></p>
-<p><strong>Phone:</strong> <a href="tel:+353871234567">+353 87 123 4567</a></p>
-<p><strong>Location:</strong> Dublin, Ireland</p>
-</div>
-</section>
-
-<footer>
-<p>© 2026 Abhishek Girishbabu</p>
-</footer>
-
-<a class="sticky-contact" href="#contact">Contact Me</a>
-
-<script>
-function toggleMode() {
-    document.body.classList.toggle("dark");
-}
-</script>
-
-</body>
-</html>
